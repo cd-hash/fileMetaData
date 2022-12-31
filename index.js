@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 const upload = multer({ dest: "/api/fileanalyse" });
 
-app.use(express.static("public"));
+app.use(express.static(process.cwd() + "/public"));
 app.get("/", (_, res) => {
   res.sendFile(process.cwd() + "/views/index.html");
 });
