@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const upload = multer({ dest: "/api/fileanalyse" });
+const upload = multer({ dest: "./api/fileanalyse" });
 
 app.use(express.static(process.cwd() + "/public"));
 app.get("/", (_, res) => {
